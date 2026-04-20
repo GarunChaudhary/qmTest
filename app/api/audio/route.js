@@ -12,6 +12,8 @@ import { NextResponse } from "next/server";
 import { Storage } from "@google-cloud/storage";
 const execPromise = promisify(exec);
 
+export const dynamic = "force-dynamic";
+
 export async function GET(request) {
   try {
     let audioUrl = "";
