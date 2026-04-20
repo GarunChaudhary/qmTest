@@ -1,0 +1,36 @@
+# =============================================
+# WHITE LABEL CONFIG (single source of truth)
+# Edit here and refresh the browser.
+# =============================================
+
+# ---- App Identity ----
+APP_NAME=Cisco Quality Management
+APP_TAGLINE=Excellence in Process
+
+# ---- Logo ----
+# Empty = default SVG logo
+# /logo.png = from public/ folder
+# https://... = direct image URL
+LOGO_URL=https://www.webex.com/content/dam/www/us/en/images/header/2026/webex-nav-logo/webex-by-cisco-whitetext.png
+
+# ---- Theme (pick ONE approach) ----
+# Option A: Single line (easy)
+# THEME=light | dark | default | blue | orange | red | yellow | green | teal | cyan | indigo | violet | pink
+THEME=light
+
+# Option B: Advanced (more control)
+# THEME_MODE=light | dark
+# THEME_PRESET=default | blue | orange | red | yellow | green | teal | cyan | indigo | violet | pink
+#THEME_MODE=light
+#THEME_PRESET=Pink
+
+# ---- Brand Colors (used for gradients) ----
+PRIMARY_COLOR=#1A76D1
+SECONDARY_COLOR=#2C2D3F
+
+# =============================================
+# EXAMPLES:
+# THEME=blue
+# THEME_MODE=dark
+# THEME=dark
+# =============================================

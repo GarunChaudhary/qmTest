@@ -1,0 +1,7 @@
+.call-monitoring-title { font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; }
+.call-monitoring-card { background: white; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem; margin-bottom: 1rem; }
+.call-monitoring-table { width: 100%; border-collapse: collapse; }
+.call-monitoring-table th, .call-monitoring-table td { border: 1px solid #e5e7eb; padding: 0.5rem; text-align: left; }
+
+/* dark mode fallback */
+body.dark .call-monitoring-card { background: #111827; border-color: #374151; color: #f9fafb; }

@@ -1,0 +1,14 @@
+{
+  "extends": ["eslint:recommended", "next/core-web-vitals"],
+  "rules": {
+    "no-unused-vars": "off"
+  },
+  "globals": {
+    "Map": "readonly",
+    "Promise": "readonly",
+    "Uint8Array": "readonly"
+  },
+  "env": {
+    "es6": true
+  }
+}

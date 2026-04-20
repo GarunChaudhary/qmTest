@@ -1,0 +1,629 @@
+   /* Ensure box-sizing for all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* Form Rule Container */
+.form-rule {
+  width: 100%;
+  height: 81%;
+  padding: 4px;
+  background-color: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #888 #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+.form-rule::-webkit-scrollbar {
+  width: 8px;
+}
+
+.form-rule::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.form-rule::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.form-rule::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Form Content Styling */
+.form-content,
+.form-content-scoring {
+  margin-bottom: 15px;
+ 
+  padding: 7px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  position: relative;
+  font-family: Arial, sans-serif;
+}
+
+ 
+
+/* Remove Button Styling */
+.remove-button {
+  position: absolute;
+  top: 4px;
+  right: 5px;
+  color: #01299B;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.remove-button:hover {
+  background-color: #e9e9e9;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.remove-button i {
+  font-size: 12px;
+  margin-right: 0;
+}
+
+/* Form Row */
+.form-row{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 8px;
+  margin: 1px;
+  font-size: 12px;
+}
+
+
+.form-row-scoring {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 2px;
+  margin: 1px;
+  font-size: 12px;
+}
+/* Collapsible Box and Dropdowns */
+.collapsible-box,
+.collapsible-box-scoring,
+.question-options-dropdown,
+.question-options-dropdown-scoring,
+.dropdown-container,
+.dropdown-container-scoring,
+.then-dropdown-scoring {
+  flex: 1;
+}
+
+.question-options-dropdown,
+.question-options-dropdown-scoring {
+  max-width: 120px;
+}
+
+.dropdown-container,
+.dropdown-container-scoring {
+  max-width: 80px;
+}
+
+/* Select and Dropdown Styling */
+select,
+.form-rule-tree-dropdown {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
+.form-rule-tree-dropdown {
+  overflow-x: hidden;
+  white-space: nowrap;
+}
+
+.form-rule-tree-dropdown option {
+  max-width: 200px;
+  text-overflow: ellipsis;
+  display: block;
+  word-wrap: break-word;
+}
+
+select:disabled {
+  background-color: #e9e9e9;
+  cursor: not-allowed;
+}
+
+.tree-dropdown {
+  margin-left: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+/* Dots Container */
+.dots-container {
+  width: 150px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  padding: 0 10px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
+/* Form Rule Footer */
+.form-rule-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+/* Container Wrapper */
+.container-wrapper {
+  display: flex;
+  gap: 1%;
+  align-items: flex-start;
+}
+
+.div-container-calculator-wrapper {
+  flex: 1;
+  padding-left: 0;
+}
+
+/* Calculation Container */
+.calculation-container {
+  flex: 7;
+  padding-top: 0;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.calculation-container .form-group {
+  display: flex;
+  align-items: stretch;
+  gap: 8px;
+  margin-bottom: 5px;
+  margin-top: 4px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.calculation-container select,
+.calculation-container input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
+.calculation-container .form-group select {
+  width: 50%;
+}
+
+.calculation-container .form-group input.form-group {
+  width: 30%;
+}
+
+/* Labels */
+.base-precent-label {
+  position: relative;
+  top: 0.7vh;
+  font-size: 12px;
+  font-family: Arial, sans-serif;
+}
+
+.then-label,
+.then-label-scoring,
+.to-label {
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+/* Rule Type Selection */
+.rule-type-selection {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-bottom: 10px;
+  padding: 7px;
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  font-family: Arial, sans-serif;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.rule-type-selection label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.rule-type-selection input[type="radio"] {
+  margin-right: 5px;
+  margin-left: 10px;
+}
+
+/* Buttons */
+.button-form-rule {
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+  justify-content: space-between;
+}
+
+.add-button,
+.edit-button,
+.submit-button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+  background-color: var(--brand-primary);
+  color: white;
+}
+
+.add-button:hover,
+.edit-button:hover,
+.submit-button:hover {
+  background-color: var(--brand-secondary);
+  color: white;
+}
+
+.add-button i {
+  margin-right: 0;
+  font-size: 12px;
+  color: white;
+}
+
+/* Checkbox Options */
+.checkbox-option,
+.checkbox-option-scoring {
+  display: flex;
+  align-items: center;
+  padding: 6px 12px;
+  gap: 8px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: Arial, sans-serif;
+}
+
+.checkbox-option input,
+.checkbox-option-scoring input {
+  margin-right: 10px;
+  accent-color: var(--brand-primary);
+  cursor: pointer;
+}
+
+.checkbox-option label,
+.checkbox-option-scoring label {
+  margin: 0;
+  user-select: none;
+}
+
+.checkbox-option:hover,
+.checkbox-option-scoring:hover {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* Custom Dropdown */
+.custom-dropdown,
+.custom-dropdown-scoring {
+  position: relative;
+  display: inline-block;
+  max-width: 150px;
+}
+
+.dropdown-toggle,
+.dropdown-toggle-scoring {
+  background-color: var(--brand-primary);
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-family: Arial, sans-serif;
+}
+
+.dropdown-toggle:hover,
+.dropdown-toggle-scoring:hover {
+  background-color: var(--brand-secondary);
+}
+
+.dropdown-toggle:focus,
+.dropdown-toggle-scoring:focus {
+  outline: none;
+  box-shadow: 0 0 4px rgba(26, 118, 209, 0.5);
+}
+
+.dropdown-menu,
+.dropdown-menu-scoring {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 100%;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.custom-dropdown:hover .dropdown-menu,
+.custom-dropdown-scoring:hover .dropdown-menu-scoring {
+  display: block;
+}
+
+/* Scoring Rules Content */
+.scoring-rules-content {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* Then Value Input for Scoring */
+.then-value-input-scoring {
+  padding: 5px 10px;
+  border: 1px solid var(--brand-primary);
+  border-radius: 3px;
+  width: 100px;
+  font-size: 12px;
+  color: #333;
+  font-family: Arial, sans-serif;
+}
+
+.then-value-input-scoring::placeholder {
+  color: #888;
+  font-style: italic;
+}
+
+.then-value-input-scoring:focus {
+  border-color: #01299B;
+  outline: none;
+  box-shadow: 0 0 5px rgba(1, 41, 155, 0.5);
+}
+
+/* Media Queries */
+@media (max-width: 1060px) and (min-width: 850px) {
+  .form-rule {
+    height: 70%;
+    overflow-x: hidden;
+  }
+
+  .form-content,
+  .form-content-scoring {
+    margin-bottom: 10px;
+    margin-right: 2px;
+    padding: 8px;
+  }
+
+  .form-row,
+  .form-row-scoring {
+    gap: 3px;
+    padding: 6px;
+    margin: 0;
+  }
+
+  .rule-type-selection {
+    gap: 3px;
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  .rule-type-selection input[type="radio"] {
+    margin-right: 3px;
+    margin-left: 8px;
+  }
+
+  .add-button,
+  .edit-button,
+  .submit-button {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .add-button i,
+  .remove-button i {
+    font-size: 11px;
+  }
+
+  .then-label,
+  .then-label-scoring,
+  .to-label {
+    margin-right: 5px;
+    font-size: 11px;
+  }
+
+  select,
+  .form-rule-tree-dropdown {
+    padding: 5px;
+    font-size: 11px;
+  }
+
+  .calculation-container select,
+  .calculation-container input {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .calculation-container .form-group select {
+    width: 70%;
+  }
+}
+
+@media (max-width: 849px) and (min-width: 640px) {
+  .form-rule {
+    height: 70%;
+    padding-right: 20px;
+    overflow-x: hidden;
+  }
+
+  .form-content,
+  .form-content-scoring {
+    margin-bottom: 10px;
+    margin-right: 2px;
+    padding: 8px;
+  }
+
+  .form-row,
+  .form-row-scoring {
+    gap: 3px;
+    padding: 6px;
+    margin: 0;
+  }
+
+  .rule-type-selection {
+    gap: 3px;
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  .rule-type-selection input[type="radio"] {
+    margin-right: 3px;
+    margin-left: 8px;
+  }
+
+  .add-button,
+  .edit-button,
+  .submit-button {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .add-button i,
+  .remove-button i {
+    font-size: 11px;
+  }
+
+  .then-label,
+  .then-label-scoring,
+  .to-label {
+    margin-right: 5px;
+    font-size: 11px;
+  }
+
+  select,
+  .form-rule-tree-dropdown {
+    padding: 5px;
+    font-size: 11px;
+  }
+
+  .calculation-container select,
+  .calculation-container input {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .calculation-container .form-group select {
+    width: 70%;
+  }
+}
+
+@media (max-width: 640px) and (min-width: 425px) {
+  .form-rule {
+    height: 70%;
+    padding-right: 20px;
+    overflow-x: hidden;
+  }
+
+  .form-content,
+  .form-content-scoring {
+    margin-bottom: 10px;
+    margin-right: 2px;
+    padding: 8px;
+  }
+
+  .form-row,
+  .form-row-scoring {
+    gap: 3px;
+    padding: 6px;
+    margin: 0;
+  }
+
+  .rule-type-selection {
+    gap: 3px;
+    padding: 8px;
+    font-size: 11px;
+  }
+
+  .rule-type-selection input[type="radio"] {
+    margin-right: 3px;
+    margin-left: 8px;
+  }
+
+  .add-button,
+  .edit-button,
+  .submit-button {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  .add-button i,
+  .remove-button i {
+    font-size: 11px;
+  }
+
+  .then-label,
+  .then-label-scoring,
+  .to-label {
+    margin-right: 5px;
+    font-size: 11px;
+  }
+
+  select,
+  .form-rule-tree-dropdown {
+    padding: 5px;
+    font-size: 11px;
+  }
+
+  .calculation-container select,
+  .calculation-container input {
+    padding: 6px;
+    font-size: 11px;
+  }
+
+  .calculation-container .form-group select {
+    width: 70%;
+  }
+}
